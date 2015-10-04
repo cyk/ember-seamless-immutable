@@ -1,25 +1,37 @@
-# Ember-seamless-immutable
+# Ember Seamless Immutable
 
-This README outlines the details of collaborating on this Ember addon.
+Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects provided 
+by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)  wrapped and adapted for Ember CLI.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+`ember install ember-seamless-immutable`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+```js
+import immutable from 'immutable';
+import Ember from 'ember';
 
-## Running Tests
+export default Ember.Route.extend({
+  model() {
+    return Ember.$.getJSON('/api/contacts').then(response => {
+      return immutable(response.contacts);
+    });
+  }
+});
+```
 
-* `ember test`
-* `ember test --server`
+The default export `immutable` is adapted for Ember. The origin named export remains intact:
 
-## Building
+```
+import { Immutable } from 'immutable';
+```
 
-* `ember build`
+See [API Overview](https://github.com/rtfeldman/seamless-immutable#api-overview).
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+## Why?
+
+* Seamless-immutable source is imported from node_modules (i.e., up-to-date, not bundled) to Ember app
+* Seamless-immutable environment is set to your Ember app environment
+* Immutable objects are made usable in Ember templates
