@@ -6,6 +6,8 @@
 Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects provided 
 by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)  wrapped and adapted for Ember CLI.
 
+**Experimental.** A no-op function is added to objects targeted for immutability to work around issues of Ember defining meta on immutable objects.
+
 ## Installation
 
 `ember install ember-seamless-immutable`
