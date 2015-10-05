@@ -5,9 +5,9 @@
 [![Ember Observer Score](http://emberobserver.com/badges/ember-seamless-immutable.svg)](http://emberobserver.com/addons/ember-seamless-immutable)
 
 Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects provided 
-by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)  wrapped and adapted for Ember CLI.
+by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable) wrapped and adapted for Ember CLI.
 
-**Experimental.** A no-op function is added to objects targeted for immutability to work around issues of Ember defining meta on immutable objects.
+:warning: **Experimental.** A no-op function is added to objects targeted for immutability to work around issues of Ember defining meta on immutable objects.
 
 ## Installation
 
@@ -34,10 +34,10 @@ The default export `immutable` is adapted for Ember. The origin named export rem
 import { Immutable } from 'immutable';
 ```
 
-See [API Overview](https://github.com/rtfeldman/seamless-immutable#api-overview).
+See [Seamless Immutable: API Overview](https://github.com/rtfeldman/seamless-immutable#api-overview).
 
 ## Why?
 
-* Seamless-immutable source is imported from node_modules (i.e., up-to-date, not bundled) to Ember app
-* Seamless-immutable environment is set to your Ember app environment
+* Seamless-immutable source is imported from node_modules to Ember app (i.e., up-to-date, not bundled)
+* Seamless-immutable environment uses your Ember app environment
 * Immutable objects are made usable in Ember templates

@@ -1,6 +1,6 @@
 /**
  * When Ember retrieves meta hash for an object, we can avoid
- * its attempts to define a property on an immutable objec,
+ * its attempts to define a property on an immutable object
  * by specifying a __defineNonEnumerable method.
  *
  * @link https://github.com/emberjs/ember.js/blob/master/packages/ember-metal/lib/meta.js
@@ -9,8 +9,7 @@
 function addDefineNonEnumerable(obj) {
   if (!obj.__defineNonEnumerable) {
     obj.__defineNonEnumerable = function __defineNonEnumerable(property) {
-      //console.log('__defineNonEnumerable', property);
-      //console.log(this);
+      // no-op
     }
   }
 }
