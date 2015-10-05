@@ -1,6 +1,7 @@
 # Ember Seamless Immutable
 
 [![Build Status](https://travis-ci.org/cyk/ember-seamless-immutable.svg?branch=master)](https://travis-ci.org/cyk/ember-seamless-immutable)
+[![npm version](https://badge.fury.io/js/ember-seamless-immutable.svg)](http://badge.fury.io/js/ember-seamless-immutable)
 
 Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects provided 
 by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable)  wrapped and adapted for Ember CLI.
