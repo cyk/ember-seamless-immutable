@@ -1,5 +1,9 @@
 # Ember Seamless Immutable
 
+[![Build Status](https://travis-ci.org/cyk/ember-seamless-immutable.svg?branch=master)](https://travis-ci.org/cyk/ember-seamless-immutable)
+[![npm version](https://badge.fury.io/js/ember-seamless-immutable.svg)](http://badge.fury.io/js/ember-seamless-immutable)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-seamless-immutable.svg)](http://emberobserver.com/addons/ember-seamless-immutable)
+
 "Immutable data structures which are backwards-compatible with normal Arrays and Objects" provided by the excellent [Seamless Immutable](https://github.com/rtfeldman/seamless-immutable) library, wrapped and adapted for Ember.
 
 :warning: **Experimental.** A noop function is defined on all objects made immutable to circumvent Ember defining meta properties on them.
