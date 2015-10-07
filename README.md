@@ -1,13 +1,15 @@
 # Ember Seamless Immutable
 
-[![Build Status](https://travis-ci.org/cyk/ember-seamless-immutable.svg?branch=master)](https://travis-ci.org/cyk/ember-seamless-immutable)
-[![npm version](https://badge.fury.io/js/ember-seamless-immutable.svg)](http://badge.fury.io/js/ember-seamless-immutable)
-[![Ember Observer Score](http://emberobserver.com/badges/ember-seamless-immutable.svg)](http://emberobserver.com/addons/ember-seamless-immutable)
+"Immutable data structures which are backwards-compatible with normal Arrays and Objects" provided by the excellent [Seamless Immutable](https://github.com/rtfeldman/seamless-immutable) library, wrapped and adapted for Ember.
 
-Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects provided 
-by [seamless-immutable](https://github.com/rtfeldman/seamless-immutable) wrapped and adapted for Ember CLI.
+:warning: **Experimental.** A noop function is defined on all objects made immutable to circumvent Ember defining meta properties on them.
 
-:warning: **Experimental.** A no-op function is added to objects targeted for immutability to work around issues of Ember defining meta on immutable objects.
+### Why Addon?
+
+* Seamless-immutable is imported from node_modules to Ember app (i.e., up-to-date, not bundled)
+* Seamless-immutable is configured to your Ember app environment
+* Immutable objects are made usable in Ember templates
+* Helper that makes properties passed to a component immutable
 
 ## Installation
 
@@ -28,7 +30,7 @@ export default Ember.Route.extend({
 });
 ```
 
-The default export `immutable` is adapted for Ember. The origin named export remains intact:
+The default export `immutable` is adapted for Ember. The original named export remains intact:
 
 ```
 import { Immutable } from 'immutable';
@@ -36,8 +38,15 @@ import { Immutable } from 'immutable';
 
 See [Seamless Immutable: API Overview](https://github.com/rtfeldman/seamless-immutable#api-overview).
 
-## Why?
+### Helper
 
-* Seamless-immutable source is imported from node_modules to Ember app (i.e., up-to-date, not bundled)
-* Seamless-immutable environment uses your Ember app environment
-* Immutable objects are made usable in Ember templates
+```
+{{contact-detail contact=(immutable contact)}}
+```
+
+An immutable contact object will be passed in to the component.
+
+## Running Tests
+
+* `ember test`
+* `ember test --server`

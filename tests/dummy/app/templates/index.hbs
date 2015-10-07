@@ -1,3 +1,18 @@
-{{#each model.array as |item|}}
-    <div class="item">{{item.hammer}}</div>
+<h1>Plumbus</h1>
+
+<h2>Brapples</h2>
+{{#each plumbus.brapples as |item|}}
+  <div class="brapple">{{item}}</div>
 {{/each}}
+
+{{#if plumbus.crushedRedPartyCups}}
+  <h2>Crushed Red Party Cups</h2>
+{{/if}}
+
+<h2>How They Do It</h2>
+{{#each plumbus.howTheyDoIt as |item|}}
+  <div class="step">{{item.step}}</div>
+{{/each}}
+
+<h2>Gazorpazorpfield</h2>
+{{my-component model=(immutable gazorpazorpfield)}}

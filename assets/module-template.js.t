@@ -58,7 +58,10 @@ define('immutable', [ 'exports' ], function(exports) {
   <%= moduleBody %>
 
   exports['default'] = function(obj) {
-    preventEmberMutate(obj);
+    if (!exports.Immutable.isImmutable(obj)) {
+      preventEmberMutate(obj);
+    }
+
     return exports.Immutable.apply(this, arguments);
   };
 });
