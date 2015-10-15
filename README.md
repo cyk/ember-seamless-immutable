@@ -8,6 +8,8 @@
 
 :warning: **Experimental.** A noop function is defined on all objects made immutable to circumvent Ember defining meta properties on them.
 
+:warning: **Array prototype extension incompatiblity.** This add-on is incompatible with the Ember array prototype extension. For instructions on disabling prototype extensions [consult the Ember guide](http://guides.emberjs.com/v1.13.0/configuring-ember/disabling-prototype-extensions/).
+
 ### Why Addon?
 
 * Seamless-immutable is imported from node_modules to Ember app (i.e., up-to-date, not bundled)
