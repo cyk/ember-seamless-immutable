@@ -1,6 +1,6 @@
 {
   "name": "ember-seamless-immutable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects (as an ember-addon).",
   "directories": {
     "doc": "doc",
